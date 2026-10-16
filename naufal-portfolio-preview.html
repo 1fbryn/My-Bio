@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a192f">
+  <meta name="description" content="Naufal Febriyan — Logistics Engineering student focused on supply chain, procurement, demand planning, and data-driven logistics.">
+  <meta property="og:title" content="Naufal Febriyan — Logistics Engineering">
+  <meta property="og:description" content="Supply chain, procurement, and data-driven logistics.">
+  <meta property="og:type" content="website">
+  <title>Naufal Febriyan — Logistics Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --shadow: rgba(2, 12, 27, 0.45);
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 40px; }
+body { margin: 0; background: var(--navy); color: var(--slate); font-family: var(--font-sans); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+::selection { background: rgba(100, 255, 218, 0.22); color: var(--white); }
+a { color: var(--green); text-decoration: none; transition: color 180ms ease; }
+a:hover { color: var(--white); }
+button, a, summary { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, summary:focus-visible, article:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+.skip-link { position: fixed; top: -60px; left: 16px; z-index: 1000; background: var(--green); color: var(--navy); padding: 10px 14px; border-radius: 4px; font-weight: 700; }
+.skip-link:focus { top: 16px; color: var(--navy); }
+.scroll-progress { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; height: 2px; background: transparent; }
+.scroll-progress span { display: block; width: 0; height: 100%; background: var(--green); box-shadow: 0 0 12px rgba(100,255,218,.4); }
+.site-shell { width: min(1320px, 100%); margin: 0 auto; display: grid; grid-template-columns: minmax(340px, .88fr) minmax(0, 1.12fr); gap: clamp(40px, 6vw, 100px); padding: 0 clamp(36px, 6.4vw, 104px); }
+.sidebar { position: sticky; top: 0; height: 100vh; min-height: 650px; padding: clamp(54px, 8vh, 92px) 0 42px; display: flex; flex-direction: column; justify-content: space-between; }
+.sidebar-top { max-width: 430px; }
+.wordmark { display: inline-flex; align-items: baseline; color: var(--white); font-size: 19px; font-weight: 800; letter-spacing: -.08em; margin-bottom: 29px; }
+.wordmark span { color: var(--green); }
+.eyebrow, .section-kicker { color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: .15em; line-height: 1.5; text-transform: uppercase; }
+.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 15px; }
+.status-dot { width: 7px; height: 7px; background: var(--green); border-radius: 50%; box-shadow: 0 0 0 4px rgba(100,255,218,.08); }
+h1, h2, h3, p { margin-top: 0; }
+.sidebar h1 { margin: 0; color: var(--white); font-size: clamp(44px, 5vw, 65px); line-height: 1.04; letter-spacing: -.055em; font-weight: 800; }
+.sidebar h1 span { color: var(--lightest-slate); }
+.hero-role { color: var(--lightest-slate); font-size: clamp(18px, 2.1vw, 23px); line-height: 1.42; letter-spacing: -.025em; font-weight: 600; margin: 21px 0 14px; }
+.hero-summary { max-width: 390px; color: var(--slate); font-size: 14px; line-height: 1.8; margin-bottom: 0; }
+.primary-nav { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; margin-top: 39px; }
+.nav-link { color: var(--slate); display: flex; align-items: center; gap: 15px; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 5px 0; }
+.nav-link .nav-rule { display: block; width: 30px; height: 1px; background: var(--lightest-navy); transition: width 200ms ease, background 200ms ease; }
+.nav-link:hover, .nav-link.is-active { color: var(--white); }
+.nav-link:hover .nav-rule, .nav-link.is-active .nav-rule { width: 58px; background: var(--green); }
+.sidebar-bottom { max-width: 390px; }
+.social-links { display: flex; align-items: center; gap: 18px; margin-bottom: 12px; }
+.social-links a { display: inline-flex; align-items: center; justify-content: center; color: var(--slate); width: 23px; height: 26px; }
+.social-links a:hover { color: var(--green); transform: translateY(-2px); }
+.social-links svg { width: 19px; height: 19px; fill: currentColor; }
+.sidebar-caption { margin: 0; color: #687694; font-size: 10px; letter-spacing: .035em; }
+.content-column { min-width: 0; padding: clamp(70px, 10vh, 112px) 0 38px; }
+.content-section { margin-bottom: clamp(88px, 12vh, 130px); scroll-margin-top: 42px; }
+.section-kicker { display: none; margin-bottom: 18px; }
+.section-title { color: var(--lightest-slate); font-size: clamp(26px, 3vw, 33px); font-weight: 700; letter-spacing: -.045em; line-height: 1.2; margin-bottom: 25px; }
+.title-period { color: var(--green); }
+.prose p { margin-bottom: 16px; }
+.prose { font-size: 14px; line-height: 1.9; }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong, .entry-body strong { color: var(--lightest-slate); font-weight: 600; }
+.prose a { color: var(--lightest-slate); font-weight: 500; border-bottom: 1px solid var(--lightest-navy); }
+.prose a:hover { color: var(--green); border-color: var(--green); }
+.focus-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 23px; }
+.focus-strip span { color: var(--green); background: var(--green-tint); border-radius: 3px; padding: 5px 9px; font-size: 10px; font-weight: 600; letter-spacing: .025em; }
+.section-intro { font-size: 13px; margin: -13px 0 24px; color: var(--slate); }
+.experience-entry { display: grid; grid-template-columns: minmax(112px, .34fr) minmax(0, 1fr); gap: 18px; padding: 23px 18px; margin: 0 -18px 9px; border: 1px solid transparent; border-radius: 6px; transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+.experience-entry:hover, .experience-entry:focus-visible, .interactive-panel:hover { background: rgba(17, 34, 64, .76); border-color: rgba(35, 53, 84, .6); box-shadow: 0 10px 28px -18px var(--shadow); }
+.entry-meta { padding-top: 3px; }
+.entry-date { color: var(--slate); font-size: 10px; line-height: 1.6; letter-spacing: .06em; font-weight: 700; text-transform: uppercase; white-space: normal; }
+.entry-type { display: block; margin-top: 9px; color: #60708f; font-size: 9px; letter-spacing: .1em; line-height: 1.5; font-weight: 700; }
+.entry-body h3 { color: var(--lightest-slate); font-size: 15px; line-height: 1.5; font-weight: 650; letter-spacing: -.015em; margin: 0 0 9px; }
+.entry-at { color: var(--light-slate); font-weight: 500; }
+.entry-body p { color: var(--slate); font-size: 12px; line-height: 1.8; margin-bottom: 11px; }
+.compact-list { padding-left: 16px; margin: 8px 0 14px; color: var(--slate); font-size: 12px; line-height: 1.8; }
+.compact-list li { padding-left: 2px; margin: 4px 0; }
+.compact-list li::marker { color: var(--green); font-size: 9px; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
+.tag-list span { background: var(--green-tint); color: var(--green); padding: 4px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; line-height: 1.6; }
+.project-card { margin-bottom: 12px; border: 1px solid transparent; border-radius: 6px; background: transparent; transition: background 180ms ease, border-color 180ms ease; }
+.project-card:hover, .project-card[open] { background: rgba(17, 34, 64, .76); border-color: rgba(35, 53, 84, .65); }
+.project-card summary { display: grid; grid-template-columns: 32px minmax(0,1fr) 22px; align-items: start; gap: 12px; cursor: pointer; list-style: none; padding: 20px 18px; }
+.project-card summary::-webkit-details-marker { display: none; }
+.project-index { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .06em; padding-top: 4px; }
+.project-heading { display: flex; flex-direction: column; gap: 5px; }
+.project-heading strong { color: var(--lightest-slate); font-size: 16px; letter-spacing: -.025em; line-height: 1.4; }
+.project-heading small { color: var(--slate); font-size: 11px; line-height: 1.6; }
+.expand-icon { color: var(--green); font-size: 22px; line-height: 1; font-weight: 400; transition: transform 180ms ease; }
+.project-card[open] .expand-icon { transform: rotate(45deg); }
+.project-content { padding: 0 18px 21px 62px; }
+.project-content p { color: var(--slate); font-size: 12px; line-height: 1.85; margin: 0 0 11px; }
+.project-content p strong { color: var(--lightest-slate); }
+.project-award { display: flex; align-items: center; gap: 10px; margin: 16px 0; padding: 10px 12px; background: rgba(100,255,218,.06); border-left: 2px solid var(--green); }
+.award-star { color: var(--green); font-size: 18px; }
+.project-award span:last-child { display: flex; flex-direction: column; gap: 1px; }
+.project-award strong { color: var(--lightest-slate); font-size: 11px; }
+.project-award small { color: var(--slate); font-size: 10px; }
+.achievement-list { border-top: 1px solid rgba(35,53,84,.75); }
+.achievement-row { display: grid; grid-template-columns: 62px minmax(0,1fr) 34px; align-items: center; gap: 14px; padding: 17px 10px; margin: 0 -10px; border-bottom: 1px solid rgba(35,53,84,.75); transition: background 180ms ease; border-radius: 4px; }
+.achievement-rank { display: flex; align-items: baseline; color: var(--green); font-size: 26px; letter-spacing: -.07em; font-weight: 700; line-height: 1; }
+.achievement-rank span { font-size: 9px; letter-spacing: 0; margin-left: 2px; }
+.achievement-rank.text-rank { font-size: 8px; letter-spacing: .07em; line-height: 1.45; font-weight: 800; }
+.achievement-row h3 { font-size: 12px; line-height: 1.55; font-weight: 650; color: var(--lightest-slate); margin: 0 0 3px; }
+.achievement-row p { color: var(--slate); font-size: 10px; line-height: 1.65; margin: 0; }
+.achievement-year { align-self: start; padding-top: 4px; text-align: right; color: #667594; font-size: 10px; }
+.education-card { display: flex; align-items: center; gap: 18px; padding: 19px; margin: 0 0 30px; border: 1px solid transparent; border-radius: 6px; transition: background 180ms ease, border-color 180ms ease; }
+.education-mark { flex: 0 0 50px; height: 50px; display: grid; place-items: center; border-radius: 5px; background: var(--lightest-navy); color: var(--green); font-weight: 800; font-size: 12px; letter-spacing: -.04em; }
+.education-card .entry-date { margin-bottom: 5px; }
+.education-card h3 { color: var(--lightest-slate); font-size: 14px; margin: 0 0 2px; letter-spacing: -.02em; }
+.education-card p:last-child { margin: 0; color: var(--slate); font-size: 11px; }
+.skills-group { margin-top: 26px; }
+.skills-group h3 { color: var(--lightest-slate); font-size: 12px; letter-spacing: .015em; margin-bottom: 11px; }
+.tag-list-large { gap: 7px; }
+.tag-list-large span { padding: 6px 9px; font-size: 10px; }
+.contact-section { padding-bottom: 20px; margin-bottom: 55px; }
+.contact-copy { max-width: 450px; margin-bottom: 20px; font-size: 13px; line-height: 1.85; }
+.email-link { display: inline-flex; align-items: center; gap: 11px; color: var(--green); font-size: clamp(16px, 2vw, 19px); font-weight: 600; letter-spacing: -.02em; border-bottom: 1px solid rgba(100,255,218,.3); padding-bottom: 5px; }
+.email-link span, .contact-links span { transition: transform 180ms ease; display: inline-block; }
+.email-link:hover span, .contact-links a:hover span { transform: translate(3px,-3px); }
+.contact-links { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 22px; }
+.contact-links a { color: var(--light-slate); font-size: 12px; font-weight: 600; }
+.site-footer { padding: 22px 0 8px; border-top: 1px solid rgba(35,53,84,.65); color: #647391; font-size: 10px; line-height: 1.8; }
+.site-footer p { margin: 0 0 4px; }
+.site-footer a:not(.back-to-top) { color: var(--light-slate); border-bottom: 1px solid rgba(168,178,209,.35); }
+.site-footer a:not(.back-to-top):hover { color: var(--green); }
+.back-to-top { display: inline-block; margin-top: 10px; color: var(--green); font-weight: 600; }
+.js [data-reveal] { opacity: 0; transform: translateY(10px); transition: opacity 600ms ease, transform 600ms cubic-bezier(.2,.7,.2,1); }
+.js [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+@media (min-width: 1200px) {
+  .section-kicker { display: block; }
+  .content-column { padding-top: clamp(74px, 9vh, 104px); }
+}
+@media (max-width: 1050px) {
+  .site-shell { grid-template-columns: minmax(290px, .78fr) minmax(0, 1.22fr); gap: 38px; padding: 0 40px; }
+  .sidebar h1 { font-size: 50px; }
+  .experience-entry { grid-template-columns: 1fr; gap: 9px; }
+  .entry-type { display: inline-block; margin: 0 0 0 8px; }
+}
+@media (max-width: 760px) {
+  html { scroll-padding-top: 20px; }
+  .site-shell { display: block; padding: 0 25px; }
+  .sidebar { position: relative; height: auto; min-height: 0; padding: 40px 0 26px; border-bottom: 1px solid rgba(35,53,84,.7); }
+  .wordmark { margin-bottom: 24px; }
+  .sidebar h1 { font-size: clamp(44px, 11vw, 59px); }
+  .hero-role { font-size: 19px; margin-top: 17px; }
+  .hero-summary { max-width: 520px; font-size: 13px; }
+  .primary-nav { margin-top: 26px; flex-direction: row; flex-wrap: wrap; gap: 5px 17px; }
+  .nav-link { gap: 7px; font-size: 9px; letter-spacing: .08em; }
+  .nav-link .nav-rule { width: 13px; }
+  .nav-link:hover .nav-rule, .nav-link.is-active .nav-rule { width: 20px; }
+  .sidebar-bottom { margin-top: 25px; }
+  .social-links { margin-bottom: 5px; }
+  .sidebar-caption { display: none; }
+  .content-column { padding: 40px 0 30px; }
+  .content-section { margin-bottom: 75px; scroll-margin-top: 20px; }
+  .section-kicker { display: block; margin-bottom: 13px; }
+  .section-title { font-size: 27px; margin-bottom: 20px; }
+  .experience-entry { margin: 0 -10px 8px; padding: 18px 10px; }
+  .entry-date { font-size: 9px; }
+  .entry-body h3 { font-size: 14px; }
+  .project-card summary { padding: 17px 12px; grid-template-columns: 24px minmax(0,1fr) 20px; gap: 10px; }
+  .project-content { padding: 0 12px 18px 46px; }
+  .achievement-row { grid-template-columns: 49px minmax(0,1fr) 28px; gap: 9px; padding: 14px 5px; margin: 0 -5px; }
+  .achievement-rank { font-size: 22px; }
+  .achievement-row h3 { font-size: 11px; }
+  .achievement-row p { font-size: 9px; }
+  .education-card { padding: 13px 10px; gap: 12px; }
+  .education-mark { flex-basis: 42px; height: 42px; }
+  .contact-section { margin-bottom: 42px; }
+}
+@media (max-width: 390px) {
+  .site-shell { padding: 0 18px; }
+  .primary-nav { column-gap: 12px; }
+  .nav-link { font-size: 8px; }
+  .achievement-row { grid-template-columns: 43px minmax(0,1fr) 25px; gap: 7px; }
+  .achievement-year { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .js [data-reveal] { opacity: 1; transform: none; }
+}
+
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <div class="site-shell">
+    <aside class="sidebar" aria-label="Site introduction and navigation">
+      <div class="sidebar-top">
+        <a class="wordmark" href="#top" aria-label="Naufal Febriyan, back to top">NF<span>.</span></a>
+        <p class="eyebrow"><span class="status-dot"></span> LOGISTICS ENGINEERING · UPI</p>
+        <h1 id="top">Naufal<br><span>Febriyan.</span></h1>
+        <h2 class="hero-role">Supply chain.<br>Procurement.<br>Data-driven logistics.</h2>
+        <p class="hero-summary">I’m a Logistics Engineering student at Universitas Pendidikan Indonesia, interested in making logistics operations more structured, efficient, and data-informed.</p>
+
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a class="nav-link is-active" href="#about" data-nav="about"><span class="nav-rule"></span><span>About</span></a>
+          <a class="nav-link" href="#experience" data-nav="experience"><span class="nav-rule"></span><span>Experience</span></a>
+          <a class="nav-link" href="#projects" data-nav="projects"><span class="nav-rule"></span><span>Projects</span></a>
+          <a class="nav-link" href="#achievements" data-nav="achievements"><span class="nav-rule"></span><span>Achievements</span></a>
+          <a class="nav-link" href="#education" data-nav="education"><span class="nav-rule"></span><span>Education & skills</span></a>
+          <a class="nav-link" href="#contact" data-nav="contact"><span class="nav-rule"></span><span>Contact</span></a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="social-links" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/naufal-febriyan-42b248342/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.5a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM3.4 9.5H7v11H3.4v-11Zm5.9 0h3.4V11h.1a3.8 3.8 0 0 1 3.4-1.8c3.6 0 4.3 2.3 4.3 5.3v6h-3.6v-5.3c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9v5.4H9.3v-11Z"/></svg>
+          </a>
+          <a href="https://github.com/1fbryn?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9Z"/></svg>
+          </a>
+          <a href="mailto:naufalfebrian240@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13Zm2.7-.1L12 10.1l6.3-4.7a.8.8 0 0 0-.3-.1h-12a.8.8 0 0 0-.3.1Zm13.5 2.2-6.6 4.9a1 1 0 0 1-1.2 0L4.8 7.6v10.9c0 .4.3.7.7.7h13c.4 0 .7-.3.7-.7V7.6Z"/></svg>
+          </a>
+        </div>
+        <p class="sidebar-caption">Built around logistics, systems, and practical problem-solving.</p>
+      </div>
+    </aside>
+
+    <main id="main" class="content-column">
+      <section id="about" class="content-section about-section" data-section="about" aria-labelledby="about-title">
+        <p class="section-kicker">01 / ABOUT</p>
+        <h2 id="about-title" class="section-title">A little about me<span class="title-period">.</span></h2>
+        <div class="prose">
+          <p>Hi, I’m Naufal — a Logistics Engineering student at <a href="https://www.upi.edu/" target="_blank" rel="noopener noreferrer">Universitas Pendidikan Indonesia</a> with a strong interest in <strong>supply chain, procurement, demand planning, and data-driven logistics.</strong></p>
+          <p>I enjoy translating operational problems into structured solutions. My project experience spans demand forecasting, inventory management, warehouse digitalization, ERP–IoT integration, and logistics policy analysis. I’ve used forecasting methods and machine learning approaches to explore demand patterns and support planning decisions, alongside tools such as Microsoft Excel, Google Sheets, and Python.</p>
+          <p>I’m interested in practical improvements that connect data, technology, and day-to-day operations — especially in supply chain and procurement. Outside logistics, I’m curious about AI, transportation, sustainability, and cycling.</p>
+        </div>
+        <div class="focus-strip" aria-label="Areas of focus">
+          <span>Supply chain</span><span>Procurement</span><span>Demand planning</span><span>Logistics analytics</span>
+        </div>
+      </section>
+
+      <section id="experience" class="content-section" data-section="experience" aria-labelledby="experience-title">
+        <p class="section-kicker">02 / EXPERIENCE</p>
+        <h2 id="experience-title" class="section-title">Where I’ve contributed<span class="title-period">.</span></h2>
+
+        <article class="experience-entry interactive-panel" tabindex="0">
+          <div class="entry-meta"><span class="entry-date">OCT 2025 — OCT 2026</span><span class="entry-type">ORGANIZATION</span></div>
+          <div class="entry-body">
+            <h3>Staff · Welfare & Community Service Division <span class="entry-at">@ HMTL FPTI UPI</span></h3>
+            <p>Contributed to student advocacy, community engagement, and organizational programs throughout the 2025–2026 term.</p>
+            <ul class="compact-list">
+              <li>Helped plan and deliver Advocacy Seminars, HMTL Berbagi, Aspirational Dialogues, and HMTL Mengabdi.</li>
+              <li>Served as Event Division Head for several programs and Project Lead for HMTL Mengabdi 2025–2026.</li>
+              <li>Coordinated committee members and stakeholders through event execution and program delivery.</li>
+            </ul>
+            <div class="tag-list"><span>Project coordination</span><span>Leadership</span><span>Stakeholder engagement</span><span>Event management</span></div>
+          </div>
+        </article>
+
+        <article class="experience-entry interactive-panel" tabindex="0">
+          <div class="entry-meta"><span class="entry-date">JUL 2026</span><span class="entry-type">INTERNATIONAL PROGRAM</span></div>
+          <div class="entry-body">
+            <h3>Participant · GREAT Summer Program <span class="entry-at">@ FPTI UPI</span></h3>
+            <p>Joined an international academic program focused on AI, green transformation, future skills, and sustainable workforce development, bringing together 140+ participants from multiple countries.</p>
+            <ul class="compact-list">
+              <li>Engaged in sessions on ethical AI, green skills, TVET transformation, employability, and workforce readiness.</li>
+              <li>Explored collaborative green project design and emerging technologies for sustainability challenges.</li>
+              <li>Collaborated in a cross-disciplinary, international environment.</li>
+            </ul>
+            <div class="tag-list"><span>AI & sustainability</span><span>Cross-cultural collaboration</span><span>Green transformation</span></div>
+          </div>
+        </article>
+
+        <article class="experience-entry interactive-panel" tabindex="0">
+          <div class="entry-meta"><span class="entry-date">MAR 2025 — AUG 2025</span><span class="entry-type">TUTORING</span></div>
+          <div class="entry-body">
+            <h3>Islamic Tutor <span class="entry-at">@ Tutorial Center UPI</span></h3>
+            <p>Served as an Islamic Tutor at Universitas Pendidikan Indonesia.</p>
+            <div class="tag-list"><span>Communication</span><span>Teaching</span></div>
+          </div>
+        </article>
+
+        <article class="experience-entry interactive-panel" tabindex="0">
+          <div class="entry-meta"><span class="entry-date">MAR 2023 — FEB 2024</span><span class="entry-type">LEADERSHIP</span></div>
+          <div class="entry-body">
+            <h3>Head of Language Division <span class="entry-at">@ NURUL WAFA</span></h3>
+            <p>Led the Central Language Development division and managed the English-language curriculum, including teaching, organizing, practice, and implementation of language rules.</p>
+            <p>Instructed and evaluated language staff, reaching <strong>80% of periodic targets.</strong></p>
+            <div class="tag-list"><span>Team leadership</span><span>Curriculum coordination</span><span>English</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="projects" class="content-section" data-section="projects" aria-labelledby="projects-title">
+        <p class="section-kicker">03 / SELECTED PROJECTS</p>
+        <h2 id="projects-title" class="section-title">Problems into solutions<span class="title-period">.</span></h2>
+        <p class="section-intro">A selection of logistics, technology, and policy projects from my project work.</p>
+
+        <details class="project-card interactive-panel" open>
+          <summary>
+            <span class="project-index">01</span>
+            <span class="project-heading"><strong>PrismaSync</strong><small>Integrated ERP–IoT System for Multi-Project Construction SMEs</small></span>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="project-content">
+            <p>Proposed an integrated ERP–IoT solution to digitize logistics, procurement, attendance, payroll, and administrative processes for a multi-project construction SME.</p>
+            <p><strong>Contribution:</strong> Problem assessment, ERP–IoT integration, and Management Information System implementation. The solution brings together real-time inventory and material tracking, procurement, IoT-based attendance, payroll automation, and operational dashboards.</p>
+            <div class="tag-list"><span>Procurement</span><span>ERP</span><span>IoT</span><span>Inventory</span><span>Operations</span><span>SME digitalization</span></div>
+          </div>
+        </details>
+
+        <details class="project-card interactive-panel">
+          <summary>
+            <span class="project-index">02</span>
+            <span class="project-heading"><strong>Smart Racking System</strong><small>RFID & IoT-Based Real-Time Warehouse Monitoring</small></span>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="project-content">
+            <p>Developed a smart racking system integrating RFID, IoT, and a web-based information system for real-time warehouse inventory monitoring.</p>
+            <p>The system tracks item quantity, weight, location, availability, and inbound/outbound history to support more efficient inventory management and FIFO implementation.</p>
+            <p><strong>Contribution:</strong> Problem identification, procurement, project evaluation, and final report preparation.</p>
+            <div class="tag-list"><span>Warehouse management</span><span>RFID</span><span>IoT</span><span>Inventory visibility</span><span>FIFO</span></div>
+          </div>
+        </details>
+
+        <details class="project-card interactive-panel">
+          <summary>
+            <span class="project-index">03</span>
+            <span class="project-heading"><strong>Full Circle Policy</strong><small>The Sea Toll Backhaul Incentive Scheme</small></span>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="project-content">
+            <p>A policy-based logistics solution designed to improve backhaul utilization, maritime logistics efficiency, and regional supply chain connectivity within Indonesia’s Sea Toll Program.</p>
+            <p>The proposal combines a 30% return-cargo mandate, per-ton tax incentives, and NLE-integrated digital governance.</p>
+            <div class="project-award"><span class="award-star" aria-hidden="true">✦</span><span><strong>Third Prize — INGENIC 2026</strong><small>Green Technology & Engineering Innovation category</small></span></div>
+            <div class="tag-list"><span>Logistics policy</span><span>Maritime logistics</span><span>Backhaul utilization</span><span>Supply chain</span></div>
+          </div>
+        </details>
+      </section>
+
+      <section id="achievements" class="content-section" data-section="achievements" aria-labelledby="achievements-title">
+        <p class="section-kicker">04 / ACHIEVEMENTS</p>
+        <h2 id="achievements-title" class="section-title">Recognition & milestones<span class="title-period">.</span></h2>
+        <div class="achievement-list">
+          <article class="achievement-row interactive-panel">
+            <span class="achievement-rank">03<span>RD</span></span>
+            <div><h3>International Green Innovation Competition (INGENIC) 2026</h3><p>Third Prize · Green Technology & Engineering Innovation</p></div>
+            <span class="achievement-year">2026</span>
+          </article>
+          <article class="achievement-row interactive-panel">
+            <span class="achievement-rank">03<span>RD</span></span>
+            <div><h3>ISLI CAMP 2026 Case Competition</h3><p>Data analytics for vehicle utilization and critical-lane analysis for PT LNK</p></div>
+            <span class="achievement-year">2026</span>
+          </article>
+          <article class="achievement-row interactive-panel">
+            <span class="achievement-rank">02<span>ND</span></span>
+            <div><h3>FPTI Three-Minute Speech Competition</h3><p>Second Place · Class of 2024</p></div>
+            <span class="achievement-year">2026</span>
+          </article>
+          <article class="achievement-row interactive-panel">
+            <span class="achievement-rank text-rank">FINALIST</span>
+            <div><h3>Popular Essay Competition</h3><p>Department of Aqidah and Islamic Philosophy, UIN Sunan Gunung Djati Bandung</p></div>
+            <span class="achievement-year">2026</span>
+          </article>
+          <article class="achievement-row interactive-panel">
+            <span class="achievement-rank text-rank">BEST<br>OF BEST</span>
+            <div><h3>Best of the Best Student — KPVTI</h3><p>Logistics Achievement Awards · HMTL FPTI UPI</p></div>
+            <span class="achievement-year">2026</span>
+          </article>
+          <article class="achievement-row interactive-panel">
+            <span class="achievement-rank text-rank">BEST<br>OF BEST</span>
+            <div><h3>Best of the Best Student — English Skills</h3><p>Logistics Achievement Awards · HMTL FPTI UPI</p></div>
+            <span class="achievement-year">2026</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="content-section" data-section="education" aria-labelledby="education-title">
+        <p class="section-kicker">05 / EDUCATION & SKILLS</p>
+        <h2 id="education-title" class="section-title">Building a logistics toolkit<span class="title-period">.</span></h2>
+        <article class="education-card interactive-panel">
+          <div class="education-mark" aria-hidden="true">UPI</div>
+          <div><p class="entry-date">SEP 2024 — APR 2027</p><h3>Universitas Pendidikan Indonesia</h3><p>Bachelor of Engineering · Teknik Logistik</p></div>
+        </article>
+
+        <div class="skills-group">
+          <h3>Logistics & planning</h3>
+          <div class="tag-list tag-list-large"><span>Supply Chain Management</span><span>Procurement</span><span>Demand Planning</span><span>Demand Forecasting</span><span>Inventory Management</span><span>MRP</span><span>DRP</span><span>Warehouse Management</span><span>Transportation</span></div>
+        </div>
+        <div class="skills-group">
+          <h3>Data & systems</h3>
+          <div class="tag-list tag-list-large"><span>Microsoft Excel</span><span>Google Sheets</span><span>Python</span><span>Data Analysis</span><span>Machine Learning</span><span>ERP</span><span>IoT</span><span>RFID</span><span>Management Information Systems</span></div>
+        </div>
+        <div class="skills-group">
+          <h3>Supporting skills</h3>
+          <div class="tag-list tag-list-large"><span>Project Management</span><span>Team Coordination</span><span>Public Speaking</span><span>Stakeholder Engagement</span><span>Communication</span></div>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section contact-section" data-section="contact" aria-labelledby="contact-title">
+        <p class="section-kicker">06 / CONTACT</p>
+        <h2 id="contact-title" class="section-title">Let’s connect<span class="title-period">.</span></h2>
+        <p class="contact-copy">I’m interested in opportunities and conversations around supply chain, procurement, demand planning, logistics, and data analytics.</p>
+        <a class="email-link" href="mailto:naufalfebrian240@gmail.com">naufalfebrian240@gmail.com <span aria-hidden="true">↗</span></a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/naufal-febriyan-42b248342/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/1fbryn?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>Designed with inspiration from <a href="https://brittanychiang.com/#experience" target="_blank" rel="noopener noreferrer">Brittany Chiang’s portfolio</a>, adapted for Naufal Febriyan.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+        <a class="back-to-top" href="#top">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+(() => {
+  const navLinks = Array.from(document.querySelectorAll('[data-nav]'));
+  const sections = Array.from(document.querySelectorAll('[data-section]'));
+  const progressBar = document.getElementById('scroll-progress-bar');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reveal sections when they enter the viewport. Content remains visible if JS is disabled.
+  const revealTargets = document.querySelectorAll('.content-section, .site-footer, .experience-entry, .project-card, .achievement-row, .education-card');
+  revealTargets.forEach((element) => element.setAttribute('data-reveal', ''));
+  if ('IntersectionObserver' in window && !reducedMotion) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+    revealTargets.forEach((element) => revealObserver.observe(element));
+  } else {
+    revealTargets.forEach((element) => element.classList.add('is-visible'));
+  }
+
+  const setActiveLink = (id) => {
+    navLinks.forEach((link) => {
+      const active = link.dataset.nav === id;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  if ('IntersectionObserver' in window) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActiveLink(visible.target.dataset.section);
+    }, { rootMargin: '-18% 0px -58% 0px', threshold: [0, 0.1, 0.25, 0.5, 0.75] });
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => setActiveLink(link.dataset.nav));
+  });
+
+  const updateProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    progressBar.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+  };
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+})();
+
+  </script>
+</body>
+</html>
